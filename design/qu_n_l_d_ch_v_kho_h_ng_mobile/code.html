@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;font-family:'Be Vietnam Pro',sans-serif;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-subtle":"#f1f5f9","status-maint-text":"#c2410c","surface":"#f7f9fb","status-clean-border":"#5eead4","text-body":"#374151","status-maint-border":"#fdba74","status-danger-border":"#fca5a5","on-secondary":"#ffffff","on-background":"#191c1e","surface-container":"#eceef0","inverse-on-surface":"#eff1f3","on-primary-container":"#f7fff2","on-tertiary":"#ffffff","surface-variant":"#e0e3e5","status-clean-bg":"#ccfbf1","on-primary":"#ffffff","status-success-text":"#15803d","status-prime-bg":"#fef3c7","on-secondary-container":"#007233","status-clean-text":"#0f766e","secondary-container":"#92f5a4","on-surface-variant":"#3e4a3d","on-tertiary-fixed":"#002109","surface-container-low":"#f2f4f6","tertiary-fixed":"#6bff8f","outline-variant":"#bdcaba","on-primary-fixed":"#002109","surface-dark":"#0f172a","text-muted":"#6b7280","secondary":"#006d30","surface-dark-border":"#1e293b","on-error-container":"#93000a","surface-container-high":"#e6e8ea","on-error":"#ffffff","on-primary-fixed-variant":"#005320","primary-fixed-dim":"#62df7d","secondary-fixed":"#95f8a7","error":"#ba1a1a","primary-container":"#00873a","status-maint-bg":"#ffedd5","emerald-tint-border":"#dcfce7","emerald-deep":"#055b35","status-success-bg":"#dcfce7","surface-container-lowest":"#ffffff","inverse-primary":"#62df7d","status-danger-text":"#b91c1c","outline":"#6e7b6c","error-container":"#ffdad6","on-secondary-fixed":"#00210a","status-prime-border":"#fde68a","surface-container-highest":"#e0e3e5","surface-tint":"#006e2d","secondary-fixed-dim":"#79db8d","surface-card":"#ffffff","on-tertiary-fixed-variant":"#005321","tertiary-container":"#00873b","status-success-border":"#86efac","on-surface":"#191c1e","primary-fixed":"#7ffc97","status-info-text":"#1d4ed8","status-prime-text":"#b45309","on-secondary-fixed-variant":"#005323","emerald-tint":"#f0fdf4","inverse-surface":"#2d3133","tertiary":"#006b2d","status-info-bg":"#dbeafe","background":"#f7f9fb","status-info-border":"#93c5fd","text-heading":"#111827","on-tertiary-container":"#f7fff3","tertiary-fixed-dim":"#4ae176","primary":"#006b2c","surface-dim":"#d8dadc","surface-bright":"#f7f9fb","status-danger-bg":"#fee2e2"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"margin-desktop":"2rem","space-md":"0.75rem","space-xs":"0.25rem","margin":"1rem","gutter":"1rem","space-lg":"1rem","margin-mobile":"1rem","gutter-sm":"0.5rem","gutter-lg":"1.5rem","space-sm":"0.5rem","space-xl":"1.5rem","margin-tablet":"1.5rem"},"fontFamily":{"headline-lg":["Be Vietnam Pro"],"headline-md":["Be Vietnam Pro"],"label-md":["Be Vietnam Pro"],"label-sm":["Be Vietnam Pro"],"body-sm":["Be Vietnam Pro"],"body-md":["Be Vietnam Pro"],"display-hero":["Be Vietnam Pro"],"body-lg":["Be Vietnam Pro"],"display-hero-mobile":["Be Vietnam Pro"],"headline-lg-mobile":["Be Vietnam Pro"],"headline-sm":["Be Vietnam Pro"],"tabular-price":["Be Vietnam Pro"]},"fontSize":{"headline-lg":["30px",{"lineHeight":"38px","letterSpacing":"-0.015em","fontWeight":"700"}],"headline-md":["20px",{"lineHeight":"28px","fontWeight":"600"}],"label-md":["13px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"body-sm":["13px",{"lineHeight":"18px","fontWeight":"400"}],"body-md":["14px",{"lineHeight":"22px","fontWeight":"400"}],"display-hero":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"800"}],"body-lg":["16px",{"lineHeight":"26px","fontWeight":"400"}],"display-hero-mobile":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"800"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-sm":["16px",{"lineHeight":"24px","fontWeight":"600"}],"tabular-price":["18px",{"lineHeight":"24px","fontWeight":"700"}]}}}}</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface antialiased min-h-screen flex flex-col"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0 flex-1"><div class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center flex-shrink-0 shadow-[0_4px_12px_rgba(0,107,44,0.25)]"><span class="material-symbols-outlined text-on-primary text-[20px]">sports_soccer</span></div><div class="flex flex-col min-w-0 flex-1"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-text-heading truncate">Pitch &amp; Pulse</span><span class="px-1.5 py-0.5 rounded-full bg-status-prime-bg text-status-prime-text font-label-sm text-label-sm tracking-wide">PRO</span></div><button class="flex items-center gap-0.5 text-left text-on-surface-variant hover:text-primary transition-colors" type="button"><span class="font-label-sm text-label-sm truncate font-medium">Cụm Sân Tân Bình 1</span><span class="material-symbols-outlined text-[16px] text-on-surface-variant flex-shrink-0">expand_more</span></button></div></div><div class="flex items-center gap-space-xs flex-shrink-0"><button aria-label="Thông báo hệ thống" class="relative w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" type="button"><span class="material-symbols-outlined text-[24px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-[0_2px_8px_rgba(0,107,44,0.2)] flex-shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Category Context & Quick Triggers -->
+<section class="px-margin pt-space-md pb-space-xs flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Hàng hóa &amp; Tiện ích • Mục 4.7</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-success-bg text-status-success-text font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+        Ca trực Quầy 01
+      </span>
+</div>
+<div class="flex items-center justify-between mt-1">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-text-heading">Kho Dịch Vụ &amp; Xuất Hàng</h1>
+<button aria-label="Lịch sử kiểm kê" class="w-9 h-9 rounded-xl bg-surface-container flex items-center justify-center text-on-surface-variant active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[20px]">history</span>
+</button>
+</div>
+<!-- Quick Action Dual Hub -->
+<div class="grid grid-cols-2 gap-space-sm mt-space-sm">
+<button class="flex items-center justify-center gap-space-xs py-2.5 px-space-sm rounded-xl bg-surface-card shadow-sm text-text-heading active:bg-surface-subtle transition-all active:scale-[0.98]" onclick="showQuickToast('Mở biểu mẫu: Nhập kho mới')" type="button">
+<div class="w-6 h-6 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[16px]">add_circle</span>
+</div>
+<span class="font-label-md text-label-md">+ Nhập kho mới</span>
+</button>
+<button class="flex items-center justify-center gap-space-xs py-2.5 px-space-sm rounded-xl bg-primary shadow-sm text-on-primary active:opacity-90 transition-all active:scale-[0.98]" onclick="showQuickToast('Mở quầy: Xuất nhanh tại chỗ')" type="button">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+<span class="font-label-md text-label-md font-bold">+ Xuất tại quầy</span>
+</button>
+</div>
+</section>
+<!-- Metric Matrix (2x2 Grid) -->
+<section class="px-margin mt-space-md">
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Metric 1: Revenue -->
+<div class="bg-surface-card rounded-xl p-space-sm shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-text-muted">F&amp;B Hôm nay</span>
+<div class="w-7 h-7 rounded-lg bg-emerald-tint flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[16px]">payments</span>
+</div>
+</div>
+<div class="mt-2">
+<div class="font-tabular-price text-tabular-price text-text-heading">4.850.000đ</div>
+<div class="flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[14px] text-status-success-text">trending_up</span>
+<span class="font-label-sm text-label-sm text-status-success-text font-bold">+22%</span>
+<span class="font-body-sm text-[11px] text-text-muted">vs hôm qua</span>
+</div>
+</div>
+</div>
+<!-- Metric 2: Stock Value -->
+<div class="bg-surface-card rounded-xl p-space-sm shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-text-muted">Giá trị kho</span>
+<div class="w-7 h-7 rounded-lg bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">inventory_2</span>
+</div>
+</div>
+<div class="mt-2">
+<div class="font-tabular-price text-tabular-price text-text-heading">32.400.000đ</div>
+<div class="flex items-center gap-1 mt-0.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span class="font-label-sm text-label-sm text-text-muted">18 nhóm mặt hàng</span>
+</div>
+</div>
+</div>
+<!-- Metric 3: Critical Low -->
+<div class="bg-surface-card rounded-xl p-space-sm shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-status-danger-text font-semibold">Cảnh báo thiếu</span>
+<div class="w-7 h-7 rounded-lg bg-status-danger-bg flex items-center justify-center text-status-danger-text">
+<span class="material-symbols-outlined text-[16px]">warning</span>
+</div>
+</div>
+<div class="mt-2">
+<div class="font-tabular-price text-tabular-price text-status-danger-text">03 mặt hàng</div>
+<p class="font-body-sm text-[11px] text-text-muted truncate mt-0.5">Revive, Băng dính, LaVie</p>
+</div>
+</div>
+<!-- Metric 4: Active Rentals -->
+<div class="bg-surface-card rounded-xl p-space-sm shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary font-semibold">Đang cho thuê</span>
+<div class="w-7 h-7 rounded-lg bg-emerald-tint flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[16px]">sports_soccer</span>
+</div>
+</div>
+<div class="mt-2">
+<div class="font-tabular-price text-tabular-price text-text-heading">22 lượt sân</div>
+<p class="font-body-sm text-[11px] text-text-muted truncate mt-0.5">14 Bib, 6 Bóng, 2 Trọng tài</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Search & Categorical Filter Rail -->
+<section class="mt-space-md flex flex-col gap-space-sm">
+<div class="px-margin">
+<div class="relative flex items-center w-full bg-surface-card rounded-xl shadow-sm">
+<span class="material-symbols-outlined absolute left-3 text-text-muted text-[20px]">search</span>
+<input class="w-full bg-transparent pl-10 pr-9 py-2.5 font-body-md text-body-md text-text-heading placeholder-text-muted focus:outline-none" id="item-search-input" placeholder="Tìm mặt hàng, nước uống, dụng cụ tập..." type="text"/>
+<button class="absolute right-3 text-text-muted hover:text-text-heading" onclick="document.getElementById('item-search-input').value=''; filterInventory('all');" type="button">
+<span class="material-symbols-outlined text-[18px]">cancel</span>
+</button>
+</div>
+</div>
+<!-- Scrollable Pills -->
+<div class="flex items-center gap-space-xs overflow-x-auto px-margin no-scrollbar py-0.5" id="category-pills">
+<button class="category-pill flex-shrink-0 px-3 py-1.5 rounded-full bg-primary text-on-primary font-label-md text-label-md shadow-sm transition-all" onclick="selectFilterPill(this, 'all')" type="button">
+        Tất cả (18)
+      </button>
+<button class="category-pill flex-shrink-0 px-3 py-1.5 rounded-full bg-surface-card text-on-surface-variant font-label-md text-label-md active:bg-surface-subtle transition-all" onclick="selectFilterPill(this, 'drinks')" type="button">
+        Nước giải khát (8)
+      </button>
+<button class="category-pill flex-shrink-0 px-3 py-1.5 rounded-full bg-surface-card text-on-surface-variant font-label-md text-label-md active:bg-surface-subtle transition-all" onclick="selectFilterPill(this, 'gear')" type="button">
+        Dụng cụ &amp; Áo tập (6)
+      </button>
+<button class="category-pill flex-shrink-0 px-3 py-1.5 rounded-full bg-surface-card text-on-surface-variant font-label-md text-label-md active:bg-surface-subtle transition-all" onclick="selectFilterPill(this, 'services')" type="button">
+        Dịch vụ trận đấu (4)
+      </button>
+</div>
+</section>
+<!-- Inventory Master Roster -->
+<section class="px-margin mt-space-md flex flex-col gap-space-sm" id="inventory-list">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-text-heading">Danh mục vật tư hiện hành</span>
+<span class="font-label-sm text-label-sm text-text-muted">Cập nhật 4 phút trước</span>
+</div>
+<!-- Card 1: Revive Chanh Muoi (Low Alert) -->
+<div class="inventory-card bg-surface-card rounded-xl p-space-sm shadow-sm flex flex-col gap-space-sm" data-category="drinks">
+<div class="flex items-start gap-space-sm">
+<img class="w-16 h-16 rounded-lg object-cover flex-shrink-0 bg-surface-container" data-alt="Commercial studio shot of cold Revive Lemon Salt electrolyte sports drink bottles with condensation droplets, natural green pitch background, bright athletic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeaHNfFeCpy-C1VzIp-cN8McJioIZsx8pGYVsAAVCQRVLvUak60_pEOFRfPPtCk3T7cAdvRYYiCEVWBAr1n9UMZjOQ38oXyUGtnN9dOwusqzofQkeNICoBO4Ju5nmJh1z3Zgn6RulBlGAV20xmzE_AphJ7f0TNk0DohCDI4Wwh69eEYkMufXX7CdSoil-E6wZm1j9aJ3I5DqwSrOOb5iwe6fHrsai7fKmVxJwu-Av0"/>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1">
+<h2 class="font-headline-sm text-headline-sm text-text-heading truncate">Revive Chanh Muối</h2>
+<span class="px-2 py-0.5 rounded-full bg-status-danger-bg text-status-danger-text font-label-sm text-label-sm font-bold flex-shrink-0">
+              Sắp hết ⚠️
+            </span>
+</div>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-tabular-price text-tabular-price text-primary">90.000đ</span>
+<span class="font-body-sm text-[12px] text-text-muted">/ lốc 6 chai (15k/chai)</span>
+</div>
+<div class="flex items-center gap-2 mt-1">
+<span class="font-body-sm text-[12px] text-text-muted">Tồn quầy:</span>
+<span class="font-label-md text-label-md text-status-danger-text font-bold">8 lốc</span>
+<span class="font-body-sm text-[11px] text-text-muted">(Định mức: &gt;15)</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2 bg-surface-container-low rounded-lg px-space-sm py-1.5">
+<span class="font-body-sm text-[12px] text-text-muted">Gắn nhanh cho trận ca tối</span>
+<button class="px-3 py-1 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm font-bold shadow-sm active:scale-95 transition-transform flex items-center gap-1" onclick="triggerDispatch('Revive Chanh Muối', '15.000đ/chai')" type="button">
+<span class="material-symbols-outlined text-[14px]">local_mall</span>
+          + Xuất ca
+        </button>
+</div>
+</div>
+<!-- Card 2: LaVie 500ml (Healthy Stock) -->
+<div class="inventory-card bg-surface-card rounded-xl p-space-sm shadow-sm flex flex-col gap-space-sm" data-category="drinks">
+<div class="flex items-start gap-space-sm">
+<img class="w-16 h-16 rounded-lg object-cover flex-shrink-0 bg-surface-container" data-alt="Pure mineral water plastic bottles LaVie stacked neatly in sports club warehouse with emerald green ambient stadium glow, clear high contrast" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1uXHyxiOLseAbukub1yOMMGirX7BMBA4Voy8k_MJnyWrpehLugZIR_tmo0HxwCHRSijvl3eVlxcdAj0B1JX7DmQwrfDPu7dTizzcQqXOsj-LyWgPi_2bfPVMifrEujmevlamDVc3OM6LQP_H9OXRoWuIRG5MHZbDT9UT_OmZDlMDYE1PHFhDZMDUYSOe7Sgdzm-vYqLUT2ipYDDIDpZVI8ek6xBZ6BNq3ZMbJ1Su9"/>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1">
+<h2 class="font-headline-sm text-headline-sm text-text-heading truncate">Nước Suối LaVie 500ml</h2>
+<span class="px-2 py-0.5 rounded-full bg-status-success-bg text-status-success-text font-label-sm text-label-sm font-semibold flex-shrink-0">
+              An toàn
+            </span>
+</div>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-tabular-price text-tabular-price text-primary">120.000đ</span>
+<span class="font-body-sm text-[12px] text-text-muted">/ thùng 24 chai</span>
+</div>
+<div class="flex items-center gap-2 mt-1">
+<span class="font-body-sm text-[12px] text-text-muted">Tồn quầy:</span>
+<span class="font-label-md text-label-md text-text-heading font-bold">26 thùng</span>
+<span class="font-body-sm text-[11px] text-text-muted">kho trung tâm</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2 bg-surface-container-low rounded-lg px-space-sm py-1.5">
+<span class="font-body-sm text-[12px] text-text-muted">Khách đặt sỉ đội bóng</span>
+<button class="px-3 py-1 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm font-bold shadow-sm active:scale-95 transition-transform flex items-center gap-1" onclick="triggerDispatch('LaVie 500ml', '120.000đ/thùng')" type="button">
+<span class="material-symbols-outlined text-[14px]">local_mall</span>
+          + Xuất ca
+        </button>
+</div>
+</div>
+<!-- Card 3: Red Bull Thai -->
+<div class="inventory-card bg-surface-card rounded-xl p-space-sm shadow-sm flex flex-col gap-space-sm" data-category="drinks">
+<div class="flex items-start gap-space-sm">
+<img class="w-16 h-16 rounded-lg object-cover flex-shrink-0 bg-surface-container" data-alt="Golden energy drink slim cans chilled with frost inside stadium transparent glass display cooler, premium athletic sports lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-PgWo9qA0LFTK91926ZBW7GDRw7nvYZs8BIqGJKKh9TlgcDsbaZVqG2UPxPZiSVR8z1ONtjZN1yXwOdqMnTIlijbBHR7d3UnzukKb5UWW5MAy_jbr8QgipYY-r7Ijph47rz22lXzn0LYkHclM82O7gffw_7e1HUIheSAlgbMf4sy2TvdINQGUSP5idHgiUjnfIH4VXXr-tmAIv8Sm4wq5c6-KridI5SgiRAgtgsSd"/>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1">
+<h2 class="font-headline-sm text-headline-sm text-text-heading truncate">Red Bull Thái (Lon Vàng)</h2>
+<span class="px-2 py-0.5 rounded-full bg-status-prime-bg text-status-prime-text font-label-sm text-label-sm font-semibold flex-shrink-0">
+              Dồi dào
+            </span>
+</div>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-tabular-price text-tabular-price text-primary">20.000đ</span>
+<span class="font-body-sm text-[12px] text-text-muted">/ lon 250ml</span>
+</div>
+<div class="flex items-center gap-2 mt-1">
+<span class="font-body-sm text-[12px] text-text-muted">Tồn quầy:</span>
+<span class="font-label-md text-label-md text-text-heading font-bold">14 lốc</span>
+<span class="font-body-sm text-[11px] text-text-muted">(84 lon sẵn sàng)</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2 bg-surface-container-low rounded-lg px-space-sm py-1.5">
+<span class="font-body-sm text-[12px] text-text-muted">Ướp lạnh tủ mát số 2</span>
+<button class="px-3 py-1 rounded-lg bg-surface-card text-primary font-label-sm text-label-sm font-bold shadow-sm active:bg-emerald-tint transition-colors flex items-center gap-1" onclick="triggerDispatch('Red Bull Thái', '20.000đ/lon')" type="button">
+<span class="material-symbols-outlined text-[14px]">local_mall</span>
+          + Xuất ca
+        </button>
+</div>
+</div>
+<!-- Card 4: Team Bibs (Gear & Rental) -->
+<div class="inventory-card bg-surface-card rounded-xl p-space-sm shadow-sm flex flex-col gap-space-sm" data-category="gear">
+<div class="flex items-start gap-space-sm">
+<div class="w-16 h-16 rounded-lg bg-status-prime-bg flex flex-col items-center justify-center text-status-prime-text flex-shrink-0">
+<span class="material-symbols-outlined text-[30px]">checkroom</span>
+<span class="font-label-sm text-[10px] uppercase font-bold">Bộ 7 áo</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1">
+<h2 class="font-headline-sm text-headline-sm text-text-heading truncate">Thuê Áo Bib Phân Đội</h2>
+<span class="px-2 py-0.5 rounded-full bg-status-clean-bg text-status-clean-text font-label-sm text-label-sm font-semibold flex-shrink-0">
+              Đã giặt sấy thơm
+            </span>
+</div>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-tabular-price text-tabular-price text-primary">50.000đ</span>
+<span class="font-body-sm text-[12px] text-text-muted">/ bộ 7 áo / trận</span>
+</div>
+<div class="flex items-center gap-2 mt-1">
+<span class="font-body-sm text-[12px] text-text-muted">Khả dụng:</span>
+<span class="font-label-md text-label-md text-status-success-text font-bold">12 bộ sẵn sàng</span>
+<span class="font-body-sm text-[11px] text-text-muted">(Cam &amp; Xanh neon)</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2 bg-surface-container-low rounded-lg px-space-sm py-1.5">
+<span class="font-body-sm text-[12px] text-text-muted">Đặt cọc theo thẻ CCCD</span>
+<button class="px-3 py-1 rounded-lg bg-secondary text-on-secondary font-label-sm text-label-sm font-bold shadow-sm active:scale-95 transition-transform flex items-center gap-1" onclick="triggerDispatch('Áo Bib Phân Đội', '50.000đ/bộ')" type="button">
+<span class="material-symbols-outlined text-[14px]">swap_horiz</span>
+          Cho thuê
+        </button>
+</div>
+</div>
+<!-- Card 5: Molten FIFA Ball -->
+<div class="inventory-card bg-surface-card rounded-xl p-space-sm shadow-sm flex flex-col gap-space-sm" data-category="gear">
+<div class="flex items-start gap-space-sm">
+<img class="w-16 h-16 rounded-lg object-cover flex-shrink-0 bg-surface-container" data-alt="Official FIFA Pro Molten soccer ball sitting on pristine synthetic emerald pitch grass under warm floodlights, crisp surface detailing" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAN8QGZ062Dsy83i8KAxRdzG_7FRKB8nVwe1H6vEdxT_30IPucDt8xRhxDBNzET5i6uAgEZnMB6D06GRuZ6C0w_L6J61Pw95JLuGxB3zjvJ1avFjYDJSrc1KpSIrjJpaThfZ1QJfWQS50XttfqmT2yU0UirLqducdG6UaVCuNi861hw-jdsKUkmgqQKtsJve8jQs_J_wJ4ySbE3qTSS5Wb9GMbTDg8LS7L31YUbOv88"/>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1">
+<h2 class="font-headline-sm text-headline-sm text-text-heading truncate">Bóng Molten FIFA Pro Số 5</h2>
+<span class="px-2 py-0.5 rounded-full bg-status-success-bg text-status-success-text font-label-sm text-label-sm font-semibold flex-shrink-0">
+              Áp suất 0.8 bar
+            </span>
+</div>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-tabular-price text-tabular-price text-primary">30.000đ</span>
+<span class="font-body-sm text-[12px] text-text-muted">/ quả / trận</span>
+</div>
+<div class="flex items-center gap-2 mt-1">
+<span class="font-body-sm text-[12px] text-text-muted">Còn tại tủ:</span>
+<span class="font-label-md text-label-md text-text-heading font-bold">15 quả</span>
+<span class="font-body-sm text-[11px] text-text-muted">(6 quả đang trên sân)</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2 bg-surface-container-low rounded-lg px-space-sm py-1.5">
+<span class="font-body-sm text-[12px] text-text-muted">Kiểm tra van hơi trước khi giao</span>
+<button class="px-3 py-1 rounded-lg bg-secondary text-on-secondary font-label-sm text-label-sm font-bold shadow-sm active:scale-95 transition-transform flex items-center gap-1" onclick="triggerDispatch('Bóng Molten Số 5', '30.000đ/trận')" type="button">
+<span class="material-symbols-outlined text-[14px]">sports_soccer</span>
+          Giao bóng
+        </button>
+</div>
+</div>
+<!-- Card 6: Goalkeeper Gloves -->
+<div class="inventory-card bg-surface-card rounded-xl p-space-sm shadow-sm flex flex-col gap-space-sm" data-category="gear">
+<div class="flex items-start gap-space-sm">
+<div class="w-16 h-16 rounded-lg bg-surface-container flex flex-col items-center justify-center text-on-surface-variant flex-shrink-0">
+<span class="material-symbols-outlined text-[28px]">sports_handball</span>
+<span class="font-label-sm text-[10px] font-bold">Size 8-9-10</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1">
+<h2 class="font-headline-sm text-headline-sm text-text-heading truncate">Găng Tay Thủ Môn Dính Bóng</h2>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold flex-shrink-0">
+              Có xương bảo vệ
+            </span>
+</div>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-tabular-price text-tabular-price text-primary">40.000đ</span>
+<span class="font-body-sm text-[12px] text-text-muted">/ đôi / trận</span>
+</div>
+<div class="flex items-center gap-2 mt-1">
+<span class="font-body-sm text-[12px] text-text-muted">Tồn quầy:</span>
+<span class="font-label-md text-label-md text-text-heading font-bold">06 đôi</span>
+<span class="font-body-sm text-[11px] text-text-muted">Đệm mút sạch 100%</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2 bg-surface-container-low rounded-lg px-space-sm py-1.5">
+<span class="font-body-sm text-[12px] text-text-muted">Kèm xịt vệ sinh găng</span>
+<button class="px-3 py-1 rounded-lg bg-surface-card text-text-heading font-label-sm text-label-sm font-bold shadow-sm active:bg-surface-subtle transition-colors flex items-center gap-1" onclick="triggerDispatch('Găng Thủ Môn Pro', '40.000đ/trận')" type="button">
+<span class="material-symbols-outlined text-[14px]">swap_horiz</span>
+          Cho thuê
+        </button>
+</div>
+</div>
+<!-- Card 7: Referee Service -->
+<div class="inventory-card bg-surface-card rounded-xl p-space-sm shadow-sm flex flex-col gap-space-sm" data-category="services">
+<div class="flex items-start gap-space-sm">
+<div class="w-16 h-16 rounded-lg bg-status-info-bg flex flex-col items-center justify-center text-status-info-text flex-shrink-0">
+<span class="material-symbols-outlined text-[28px]">sports</span>
+<span class="font-label-sm text-[10px] font-bold">Bằng VFF</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1">
+<h2 class="font-headline-sm text-headline-sm text-text-heading truncate">Trọng Tài Chính VFF</h2>
+<span class="px-2 py-0.5 rounded-full bg-status-info-bg text-status-info-text font-label-sm text-label-sm font-semibold flex-shrink-0">
+              Đang 3 trận
+            </span>
+</div>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-tabular-price text-tabular-price text-primary">200.000đ</span>
+<span class="font-body-sm text-[12px] text-text-muted">/ trận (60-90p)</span>
+</div>
+<div class="flex items-center gap-2 mt-1">
+<span class="font-body-sm text-[12px] text-text-muted">Điều phối viên:</span>
+<span class="font-label-md text-label-md text-status-success-text font-bold">Có sẵn 2 trọng tài dự phòng</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2 bg-surface-container-low rounded-lg px-space-sm py-1.5">
+<span class="font-body-sm text-[12px] text-text-muted">Còi FOX40 + Thẻ chuẩn</span>
+<button class="px-3 py-1 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm font-bold shadow-sm active:scale-95 transition-transform flex items-center gap-1" onclick="triggerDispatch('Trọng Tài VFF', '200.000đ/trận')" type="button">
+<span class="material-symbols-outlined text-[14px]">assignment_turned_in</span>
+          Điều phối
+        </button>
+</div>
+</div>
+<!-- Card 8: Livestream Service -->
+<div class="inventory-card bg-surface-card rounded-xl p-space-sm shadow-sm flex flex-col gap-space-sm" data-category="services">
+<div class="flex items-start gap-space-sm">
+<div class="w-16 h-16 rounded-lg bg-status-prime-bg flex flex-col items-center justify-center text-status-prime-text flex-shrink-0">
+<span class="material-symbols-outlined text-[28px]">videocam</span>
+<span class="font-label-sm text-[10px] font-bold">2 CAM FHD</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1">
+<h2 class="font-headline-sm text-headline-sm text-text-heading truncate">Livestream &amp; Tỉ Số Sân</h2>
+<span class="px-2 py-0.5 rounded-full bg-status-prime-bg text-status-prime-text font-label-sm text-label-sm font-semibold flex-shrink-0">
+              Nhận ca 19:30
+            </span>
+</div>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-tabular-price text-tabular-price text-primary">500.000đ</span>
+<span class="font-body-sm text-[12px] text-text-muted">/ trận (kèm BLV cơ bản)</span>
+</div>
+<div class="flex items-center gap-2 mt-1">
+<span class="font-body-sm text-[12px] text-text-muted">Hệ thống:</span>
+<span class="font-label-md text-label-md text-text-heading font-bold">Sân 3 &amp; Sân 5</span>
+<span class="font-body-sm text-[11px] text-text-muted">Có sẵn gimbal</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2 bg-surface-container-low rounded-lg px-space-sm py-1.5">
+<span class="font-body-sm text-[12px] text-text-muted">Tự động đẩy luồng Facebook/Youtube</span>
+<button class="px-3 py-1 rounded-lg bg-surface-card text-text-heading font-label-sm text-label-sm font-bold shadow-sm active:bg-surface-subtle transition-colors flex items-center gap-1" onclick="triggerDispatch('Dịch vụ Livestream', '500.000đ/trận')" type="button">
+<span class="material-symbols-outlined text-[14px]">sensors</span>
+          Đặt lịch
+        </button>
+</div>
+</div>
+</section>
+<!-- Live Dispatch Log for Today's Shift -->
+<section class="px-margin mt-space-xl flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[20px]">receipt_long</span>
+<span class="font-headline-sm text-headline-sm text-text-heading">Nhật ký xuất ca hôm nay</span>
+</div>
+<button class="font-label-sm text-label-sm text-primary font-bold" onclick="showQuickToast('Đang tải danh sách đầy đủ')" type="button">Xem tất cả (42)</button>
+</div>
+<!-- Ticket 1: Paid VietQR -->
+<div class="bg-surface-card rounded-xl p-space-sm shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-text-heading font-bold">#PP-8899</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Sân 3 (Kèo 7 người)</span>
+</div>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-success-bg text-status-success-text font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+          Đã quét VietQR
+        </span>
+</div>
+<div class="flex items-center justify-between text-body-sm text-text-muted mt-1">
+<span>02 Két Revive + 02 Bộ Áo Bib đấu</span>
+<span class="font-tabular-price text-tabular-price text-primary font-bold">340.000đ</span>
+</div>
+<div class="flex items-center justify-between pt-1 font-body-sm text-[11px] text-text-muted">
+<span>Thu ngân: Tuấn Kiệt • Lúc 17:42</span>
+<button class="text-primary hover:underline" onclick="showQuickToast('Đã gửi lại biên lai cho Sân 3')" type="button">In lại bill</button>
+</div>
+</div>
+<!-- Ticket 2: Deferred Tab Account -->
+<div class="bg-surface-card rounded-xl p-space-sm shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-text-heading font-bold">#PP-9014</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Sân 1 (Futsal 5)</span>
+</div>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-prime-bg text-status-prime-text font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+          Ghi nợ ca sân
+        </span>
+</div>
+<div class="flex items-center justify-between text-body-sm text-text-muted mt-1">
+<span>01 Thùng LaVie + 01 Trọng tài VFF</span>
+<span class="font-tabular-price text-tabular-price text-status-prime-text font-bold">320.000đ</span>
+</div>
+<div class="flex items-center justify-between pt-1 font-body-sm text-[11px] text-text-muted">
+<span>Đội FC Xây Dựng • Thanh toán sau trận lúc 19:00</span>
+<button class="text-primary font-bold" onclick="showQuickToast('Mở cổng thu nợ Sân 1')" type="button">Thu tiền</button>
+</div>
+</div>
+</section>
+<!-- Sticky Bottom Fast Dispatch Sheet Anchor -->
+<section class="px-margin mt-space-lg mb-space-xs">
+<button class="w-full py-3.5 px-space-md rounded-xl bg-primary text-on-primary font-headline-sm text-headline-sm shadow-lg flex items-center justify-center gap-2 active:scale-[0.99] transition-all hover:bg-emerald-deep" onclick="openFastDispatchModal()" type="button">
+<span class="material-symbols-outlined text-[24px]">point_of_sale</span>
+<span>Tạo phiếu xuất nhanh gắn mã sân</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</section>
+<!-- Toast Micro-feedback Layer -->
+<div class="fixed bottom-20 left-1/2 -translate-x-1/2 z-50 pointer-events-none transition-all duration-300 opacity-0 transform translate-y-3" id="dispatch-toast">
+<div class="px-4 py-2 rounded-full bg-surface-dark text-on-primary font-label-md text-label-md shadow-xl flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+<span id="toast-message">Đã cập nhật kho thành công</span>
+</div>
+</div>
+</div>
+<script>
+  // Filter Functionality
+  function selectFilterPill(buttonElement, category) {
+    document.querySelectorAll('.category-pill').forEach(pill => {
+      pill.classList.remove('bg-primary', 'text-on-primary');
+      pill.classList.add('bg-surface-card', 'text-on-surface-variant');
+    });
+    buttonElement.classList.remove('bg-surface-card', 'text-on-surface-variant');
+    buttonElement.classList.add('bg-primary', 'text-on-primary');
+
+    filterInventory(category);
+  }
+
+  function filterInventory(category) {
+    const cards = document.querySelectorAll('.inventory-card');
+    cards.forEach(card => {
+      if (category === 'all' || card.getAttribute('data-category') === category) {
+        card.style.display = 'flex';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
+  // Live Real-time Search
+  const searchInput = document.getElementById('item-search-input');
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      const query = e.target.value.toLowerCase().trim();
+      const cards = document.querySelectorAll('.inventory-card');
+      cards.forEach(card => {
+        const title = card.querySelector('h2')?.innerText.toLowerCase() || '';
+        if (title.includes(query)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  }
+
+  // Toast Notification Micro-interaction
+  let toastTimer = null;
+  function showQuickToast(msg) {
+    const toast = document.getElementById('dispatch-toast');
+    const toastMessage = document.getElementById('toast-message');
+    if (!toast || !toastMessage) return;
+
+    toastMessage.textContent = msg;
+    toast.classList.remove('opacity-0', 'translate-y-3');
+    toast.classList.add('opacity-100', 'translate-y-0');
+
+    if (toastTimer) clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => {
+      toast.classList.remove('opacity-100', 'translate-y-0');
+      toast.classList.add('opacity-0', 'translate-y-3');
+    }, 2400);
+  }
+
+  function triggerDispatch(itemName, price) {
+    showQuickToast(`Đã xuất 1x ${itemName} (${price})`);
+  }
+
+  function openFastDispatchModal() {
+    showQuickToast('Đang kết nối danh sách Sân 1 - Sân 7...');
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.05)]" data-active-classes="text-primary font-bold"><div class="flex items-center justify-around h-16 px-space-xs"><a class="flex flex-col items-center justify-center w-14 h-12 gap-0.5 text-on-surface-variant hover:text-primary transition-colors" data-path="tong-quan" href="#"><span class="material-symbols-outlined text-[22px]">grid_view</span><span class="font-label-sm text-label-sm">Tổng quan</span></a><a class="flex flex-col items-center justify-center w-14 h-12 gap-0.5 text-on-surface-variant hover:text-primary transition-colors" data-path="lich-ca" href="#"><span class="material-symbols-outlined text-[22px]">calendar_month</span><span class="font-label-sm text-label-sm">Lịch ca</span></a><a class="flex flex-col items-center justify-center w-14 h-12 gap-0.5 text-on-surface-variant hover:text-primary transition-colors" data-path="san-bai" href="#"><span class="material-symbols-outlined text-[22px]">stadium</span><span class="font-label-sm text-label-sm">Sân bãi</span></a><a class="flex flex-col items-center justify-center w-14 h-12 gap-0.5 text-on-surface-variant hover:text-primary transition-colors" data-path="doanh-thu" href="#"><span class="material-symbols-outlined text-[22px]">payments</span><span class="font-label-sm text-label-sm">Doanh thu</span></a><a aria-current="page" class="flex flex-col items-center justify-center w-14 h-12 gap-0.5 transition-colors text-primary font-bold" data-path="van-hanh" href="#"><span class="material-symbols-outlined text-[22px]">tune</span><span class="font-label-sm text-label-sm">Vận hành</span></a></div></nav></body></html>
