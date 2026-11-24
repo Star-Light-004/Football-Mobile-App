@@ -817,15 +817,9 @@ export default function AdminTournamentsScreen({ navigation }) {
         }
     };
 
-    // Lọc loại bỏ các đơn khách trực tuyến chưa thanh toán/chưa cọc (Unpaid + Pending)
+    // Quản trị viên theo dõi toàn bộ danh sách phiếu yêu cầu giải đấu (đồng bộ 100% bản Web)
     const validRequests = useMemo(() => {
-        return requests.filter(r => {
-            const isUnpaidClientDraft =
-                r.payment_status === 'Unpaid' &&
-                r.status === 'Pending' &&
-                (!r.admin_notes || !r.admin_notes.trim());
-            return !isUnpaidClientDraft;
-        });
+        return Array.isArray(requests) ? requests : [];
     }, [requests]);
 
     // Calculate dynamic tournament KPIs from database

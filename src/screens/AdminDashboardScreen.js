@@ -16,7 +16,6 @@ import { AuthContext } from '../context/AuthContext';
 import { getRevenueAnalyticsApi } from '../api/paymentsApi';
 import { getBookingsApi, updateBookingStatusApi } from '../api/bookingsApi';
 import { getFieldsApi } from '../api/fieldsApi';
-import { getLostFoundItemsApi, getCleaningLogsApi } from '../api/facilityApi';
 import AdminBottomNav from '../components/AdminBottomNav';
 
 export default function AdminDashboardScreen({ navigation }) {
@@ -24,40 +23,30 @@ export default function AdminDashboardScreen({ navigation }) {
     const [analytics, setAnalytics] = useState(null);
     const [recentBookings, setRecentBookings] = useState([]);
     const [fields, setFields] = useState([]);
-    const [lostFoundItems, setLostFoundItems] = useState([]);
-    const [cleaningLogs, setCleaningLogs] = useState([]);
     const [loading, setLoading] = useState(true);
     const [refreshing, setRefreshing] = useState(false);
 
     const loadData = async () => {
         try {
-            const [analyticsRes, bookingsRes, fieldsRes, cleanRes, lostRes] = await Promise.allSettled([
+            const [analyticsRes, bookingsRes, fieldsRes] = await Promise.allSettled([
                 getRevenueAnalyticsApi(),
                 getBookingsApi(),
-                getFieldsApi(),
-                getCleaningLogsApi(),
-                getLostFoundItemsApi()
+                getFieldsApi()
             ]);
 
             if (analyticsRes.status === 'fulfilled') {
                 setAnalytics(analyticsRes.value);
             }
+
             if (bookingsRes.status === 'fulfilled') {
                 const bList = Array.isArray(bookingsRes.value) ? bookingsRes.value : (bookingsRes.value?.results || []);
                 setRecentBookings(bList);
             }
+
             if (fieldsRes.status === 'fulfilled') {
                 const fData = fieldsRes.value;
                 const fList = fData?.fields || fData?.results || (Array.isArray(fData) ? fData : []);
                 setFields(fList);
-            }
-            if (cleanRes.status === 'fulfilled') {
-                const cList = Array.isArray(cleanRes.value) ? cleanRes.value : (cleanRes.value?.results || []);
-                setCleaningLogs(cList);
-            }
-            if (lostRes.status === 'fulfilled') {
-                const lList = Array.isArray(lostRes.value) ? lostRes.value : (lostRes.value?.results || []);
-                setLostFoundItems(lList);
             }
         } catch (e) {
             console.warn('Lỗi tải dữ liệu Dashboard:', e.message);
@@ -204,48 +193,6 @@ export default function AdminDashboardScreen({ navigation }) {
 
         return { bars, totalWeekRev };
     }, [recentBookings]);
-
-    // Categorized App Modules for "Phân Hệ Quản Trị & Vận Hành"
-    const moduleCategories = [
-        {
-            categoryTitle: 'ĐIỀU PHỐI SÂN & LỊCH CA',
-            categoryIcon: 'calendar',
-            categoryColor: '#006b2c',
-            items: [
-                { label: 'Quản lý đặt sân', sub: 'Lịch thi đấu, cọc & check-in 1 chạm', icon: 'calendar', screen: 'StaffBookings', color: '#006b2c', bg: '#f0fdf4' },
-                { label: 'Khung giờ & Giờ vàng', sub: 'Thiết lập ca & phụ thu đèn LED', icon: 'time', screen: 'AdminTimeslots', color: '#b45309', bg: '#fef3c7' },
-                { label: 'Điều phối giải đấu', sub: 'Tiếp nhận & duyệt giải doanh nghiệp', icon: 'trophy', screen: 'AdminTournaments', color: '#1d4ed8', bg: '#dbeafe' },
-            ]
-        },
-        {
-            categoryTitle: 'SÂN BÃI & CƠ SỞ HẠ TẦNG',
-            categoryIcon: 'football',
-            categoryColor: '#055b35',
-            items: [
-                { label: 'Quản lý sân bóng', sub: 'Danh sách sân, giá & thư viện ảnh', icon: 'football', screen: 'AdminFields', color: '#006b2c', bg: '#f0fdf4' },
-                { label: 'Giám sát vệ sinh 5S', sub: 'Checklist vệ sinh mặt cỏ & rác', icon: 'sparkles', screen: 'Cleaning', color: '#0f766e', bg: '#ccfbf1' },
-                { label: 'Bảo trì sự cố kỹ thuật', sub: 'Sửa chữa dàn đèn Philips & mặt sân', icon: 'construct', screen: 'Maintenance', color: '#b91c1c', bg: '#fee2e2' },
-            ]
-        },
-        {
-            categoryTitle: 'TÀI CHÍNH & KINH DOANH',
-            categoryIcon: 'cash',
-            categoryColor: '#006b2c',
-            items: [
-                { label: 'Báo cáo doanh thu', sub: 'Thống kê tài chính & SePay VietQR', icon: 'cash', screen: 'AdminRevenue', color: '#006b2c', bg: '#dcfce7' },
-                { label: 'Kho dịch vụ & Hàng', sub: 'F&B, nước uống Revive & phụ kiện', icon: 'cube', screen: 'AdminServices', color: '#c2410c', bg: '#ffedd5' },
-                { label: 'Voucher khuyến mãi', sub: 'Mã giảm giá & chiến dịch', icon: 'pricetag', screen: 'AdminVouchers', color: '#7c3aed', bg: '#ede9fe' },
-            ]
-        },
-        {
-            categoryTitle: 'HỆ THỐNG & NHÂN SỰ',
-            categoryIcon: 'settings',
-            categoryColor: '#374151',
-            items: [
-                { label: 'Quản trị tài khoản', sub: 'Danh sách nhân viên & khách hàng', icon: 'people', screen: 'AdminUsers', color: '#0284c7', bg: '#e0f2fe' },
-            ]
-        }
-    ];
 
     return (
         <SafeAreaView style={styles.safeArea}>
@@ -625,66 +572,6 @@ export default function AdminDashboardScreen({ navigation }) {
                         <View style={styles.cashflowFooter}>
                             <Ionicons name="analytics-outline" size={14} color="#006b2c" />
                             <Text style={styles.cashflowFooterText}>Biểu đồ dòng tiền tính trực tiếp từ các đơn đặt sân trong CSDL</Text>
-                        </View>
-                    </View>
-
-                    {/* 6. Facility & Logistics (Real data) */}
-                    <View style={styles.sectionContainer}>
-                        <Text style={styles.sectionHeading}>Vận hành & Hậu cần ca</Text>
-                        <View style={styles.dualWidgetsGrid}>
-                            {/* Lost & Found */}
-                            <TouchableOpacity
-                                style={styles.widgetCard}
-                                onPress={() => Alert.alert('Đồ thất lạc', `Hiện có ${lostFoundItems.length} món đồ thất lạc đang lưu tại kho tủ lễ tân.`)}
-                                activeOpacity={0.85}
-                            >
-                                <View style={styles.widgetHeader}>
-                                    <View style={[styles.widgetIconBox, { backgroundColor: '#ffedd5' }]}>
-                                        <Ionicons name="briefcase-outline" size={18} color="#c2410c" />
-                                    </View>
-                                    <View style={[styles.widgetIndicatorOrange, { backgroundColor: lostFoundItems.length > 0 ? '#c2410c' : '#94a3b8' }]} />
-                                </View>
-                                <Text style={styles.widgetBigNum}>
-                                    {String(lostFoundItems.length).padStart(2, '0')}
-                                    <Text style={styles.widgetUnit}> món</Text>
-                                </Text>
-                                <Text style={styles.widgetTitle}>Đồ thất lạc</Text>
-                                <Text style={styles.widgetDesc} numberOfLines={1}>
-                                    {lostFoundItems.length > 0 ? (lostFoundItems[0].item_name || 'Đang lưu giữ') : 'Kho tủ lễ tân trống'}
-                                </Text>
-                                <View style={styles.widgetFooter}>
-                                    <Text style={styles.widgetActionText}>Xem kho tủ</Text>
-                                    <Ionicons name="arrow-forward" size={13} color="#006b2c" />
-                                </View>
-                            </TouchableOpacity>
-
-                            {/* 5S Cleaning Checklist */}
-                            <TouchableOpacity
-                                style={styles.widgetCard}
-                                onPress={() => navigation.navigate('Cleaning')}
-                                activeOpacity={0.85}
-                            >
-                                <View style={styles.widgetHeader}>
-                                    <View style={[styles.widgetIconBox, { backgroundColor: '#ccfbf1' }]}>
-                                        <Ionicons name="sparkles" size={18} color="#0f766e" />
-                                    </View>
-                                    <View style={styles.widgetPillClean}>
-                                        <Text style={styles.widgetPillCleanText}>5S Chuẩn</Text>
-                                    </View>
-                                </View>
-                                <Text style={styles.widgetBigNum}>
-                                    {cleaningLogs.filter(l => String(l.status || '').toLowerCase() === 'completed').length}
-                                    <Text style={styles.widgetUnit}> / {cleaningLogs.length || totalFieldsCount} ca</Text>
-                                </Text>
-                                <Text style={styles.widgetTitle}>Vệ sinh sân bãi</Text>
-                                <Text style={styles.widgetDesc} numberOfLines={1}>
-                                    {cleaningLogs.filter(l => String(l.status || '').toLowerCase() === 'pending').length} ca chờ dọn rác
-                                </Text>
-                                <View style={styles.widgetFooter}>
-                                    <Text style={[styles.widgetActionText, { color: '#0f766e' }]}>Mở checklist</Text>
-                                    <Ionicons name="arrow-forward" size={13} color="#0f766e" />
-                                </View>
-                            </TouchableOpacity>
                         </View>
                     </View>
 

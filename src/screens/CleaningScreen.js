@@ -1312,7 +1312,7 @@ export default function CleaningScreen({ navigation }) {
                                                 activeOpacity={0.8}
                                             >
                                                 <Ionicons
-                                                    name={isPending ? 'checkmark-circle' : 'refresh-outline'}
+                                                    name={isPending ? 'checkmark-circle' : 'repeat-outline'}
                                                     size={15}
                                                     color={isPending ? '#15803d' : '#64748b'}
                                                 />
